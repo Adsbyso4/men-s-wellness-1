@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amasho | Best Online Shopping</title>
+    <title>Amasho | Sasta aur Sabse Accha</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
@@ -11,6 +11,7 @@
         .f-orange { background-color: #fb641b; }
         .f-yellow { background-color: #ff9f00; }
         .hide-scroll::-webkit-scrollbar { display: none; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
     </style>
 </head>
 <body class="bg-gray-100 pb-20">
@@ -18,97 +19,104 @@
     <header class="f-blue text-white sticky top-0 z-50 py-3 shadow-md">
         <div class="container mx-auto px-4 flex items-center justify-between">
             <div class="flex items-center gap-3">
-                <i class="fas fa-bars text-xl"></i>
-                <div class="text-2xl font-bold italic">Amasho</div>
+                <i class="fas fa-bars text-lg"></i>
+                <div class="text-2xl font-bold italic tracking-tighter">Amasho</div>
             </div>
-            <button onclick="toggleAuth()" class="bg-white text-[#2874f0] px-5 py-1 font-bold rounded-sm text-sm">Login</button>
+            <div class="flex gap-4">
+                <i class="fas fa-search text-lg"></i>
+                <i class="fas fa-shopping-cart text-lg"></i>
+            </div>
         </div>
     </header>
 
-    <div class="bg-white shadow-sm overflow-x-auto hide-scroll flex gap-6 px-4 py-3 text-[10px] font-bold text-gray-600 border-b">
-        <div class="text-center min-w-[60px]"><img src="https://i.postimg.cc/J7BgYdsX/p1.avif" class="w-8 h-8 mx-auto mb-1">Electronics</div>
-        <div class="text-center min-w-[60px]"><img src="https://i.postimg.cc/J7BgYdsX/p1.avif" class="w-8 h-8 mx-auto mb-1">Fashion</div>
-        <div class="text-center min-w-[60px]"><img src="https://i.postimg.cc/J7BgYdsX/p1.avif" class="w-8 h-8 mx-auto mb-1">Home</div>
-        <div class="text-center min-w-[60px]"><img src="https://i.postimg.cc/J7BgYdsX/p1.avif" class="w-8 h-8 mx-auto mb-1">Toys</div>
-        <div class="text-center min-w-[60px]"><img src="https://i.postimg.cc/J7BgYdsX/p1.avif" class="w-8 h-8 mx-auto mb-1">Beauty</div>
+    <div class="bg-white flex gap-6 px-4 py-3 overflow-x-auto hide-scroll border-b text-[10px] font-bold text-gray-600">
+        <div class="text-center min-w-[65px]"><img src="https://i.postimg.cc/J7BgYdsX/p1.avif" class="w-10 h-10 mx-auto mb-1 rounded-full border p-1">Mobiles</div>
+        <div class="text-center min-w-[65px]"><img src="https://via.placeholder.com/100?text=Fashion" class="w-10 h-10 mx-auto mb-1 rounded-full border p-1">Fashion</div>
+        <div class="text-center min-w-[65px]"><img src="https://via.placeholder.com/100?text=Elec" class="w-10 h-10 mx-auto mb-1 rounded-full border p-1">Electronics</div>
+        <div class="text-center min-w-[65px]"><img src="https://via.placeholder.com/100?text=Home" class="w-10 h-10 mx-auto mb-1 rounded-full border p-1">Home</div>
+        <div class="text-center min-w-[65px]"><img src="https://via.placeholder.com/100?text=Beauty" class="w-10 h-10 mx-auto mb-1 rounded-full border p-1">Beauty</div>
+        <div class="text-center min-w-[65px]"><img src="https://via.placeholder.com/100?text=Appl" class="w-10 h-10 mx-auto mb-1 rounded-full border p-1">Appliances</div>
+        <div class="text-center min-w-[65px]"><img src="https://via.placeholder.com/100?text=Toys" class="w-10 h-10 mx-auto mb-1 rounded-full border p-1">Toys</div>
+        <div class="text-center min-w-[65px]"><img src="https://via.placeholder.com/100?text=Sports" class="w-10 h-10 mx-auto mb-1 rounded-full border p-1">Sports</div>
+        <div class="text-center min-w-[65px]"><img src="https://via.placeholder.com/100?text=Shoes" class="w-10 h-10 mx-auto mb-1 rounded-full border p-1">Footwear</div>
+        <div class="text-center min-w-[65px]"><img src="https://via.placeholder.com/100?text=Gadget" class="w-10 h-10 mx-auto mb-1 rounded-full border p-1">Gadgets</div>
     </div>
 
-    <main class="container mx-auto p-2 max-w-4xl">
-        <div class="bg-white rounded-sm shadow-sm p-4">
-            
-            <div class="relative group">
-                <div id="slider" class="flex overflow-x-auto snap-x snap-mandatory hide-scroll h-80">
+    <div id="page-content">
+        <main class="p-2">
+            <div class="bg-white rounded shadow-sm p-4 mb-4">
+                <div class="flex overflow-x-auto snap-x snap-mandatory hide-scroll h-72 border-b pb-4">
                     <img src="https://i.postimg.cc/J7BgYdsX/p1.avif" class="w-full h-full object-contain snap-center shrink-0">
                     <img src="https://i.postimg.cc/ZYrHdkBJ/p1i2.avif" class="w-full h-full object-contain snap-center shrink-0">
                     <img src="https://i.postimg.cc/tCq3nsGN/p1i3.avif" class="w-full h-full object-contain snap-center shrink-0">
                     <img src="https://i.postimg.cc/Pr5Dr016/p1i4.avif" class="w-full h-full object-contain snap-center shrink-0">
                 </div>
-                <p class="text-[10px] text-center text-gray-400 mt-2">Swipe left to see more photos</p>
-            </div>
-
-            <div class="mt-4">
-                <h1 class="text-lg text-gray-800 leading-tight">50000 to 120000 saving Money gulak medium quality Wooden Money Piggy Bank for Kids</h1>
-                <div class="flex items-center gap-2 mt-1">
-                    <span class="bg-green-700 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-sm">4.1 ★</span>
-                    <span class="text-gray-400 text-xs font-bold">36,613 Ratings</span>
-                </div>
-                <div class="mt-3 flex items-baseline gap-2">
-                    <span class="text-3xl font-bold text-gray-900">₹299</span>
-                    <span class="text-gray-500 line-through text-md">₹599</span>
-                    <span class="text-green-600 font-bold text-md">50% off</span>
-                </div>
-                <p class="text-xs text-green-700 font-bold mt-1 tracking-wide"><i class="fas fa-truck"></i> Free Delivery</p>
-            </div>
-
-            <div class="mt-6 border-t pt-4">
-                <h2 class="font-bold text-sm mb-3">Product Details</h2>
-                <div class="grid grid-cols-2 gap-y-3 text-xs">
-                    <p class="text-gray-500">Material</p><p class="text-gray-800">Wood</p>
-                    <p class="text-gray-500">Type</p><p class="text-gray-800">Handicraft Piggy Bank</p>
-                    <p class="text-gray-500">Recommended Age</p><p class="text-gray-800">Above 4-6 Years</p>
-                    <p class="text-gray-500">Net Quantity</p><p class="text-gray-800">1</p>
-                    <p class="text-gray-500">Country of Origin</p><p class="text-gray-800">India</p>
+                
+                <div class="mt-4 px-2">
+                    <h1 class="text-md font-medium text-gray-800 leading-snug">50000 to 120000 Saving Money Wooden Piggy Bank for Kids (Medium Quality)</h1>
+                    <div class="flex items-center gap-2 mt-1">
+                        <span class="bg-green-700 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-sm">4.1 ★</span>
+                        <span class="text-gray-400 text-xs">36,613 Ratings</span>
+                    </div>
+                    <div class="mt-3 flex items-baseline gap-2">
+                        <span class="text-2xl font-bold text-gray-900">₹299</span>
+                        <span class="text-gray-500 line-through text-sm">₹599</span>
+                        <span class="text-green-600 font-bold text-sm">50% off</span>
+                    </div>
+                    <p class="text-xs text-green-700 font-bold mt-1">Special Offer: Free Delivery</p>
                 </div>
             </div>
-        </div>
-    </main>
 
-    <div class="fixed bottom-0 left-0 right-0 h-14 flex bg-white border-t z-50 shadow-lg">
-        <button onclick="openOrder()" class="w-1/2 bg-white text-black font-bold uppercase text-sm border-r">Add to Cart</button>
-        <button onclick="openOrder()" class="w-1/2 f-orange text-white font-bold uppercase text-sm">Buy Now</button>
+            <h2 class="font-bold text-gray-800 px-2 py-3">Similar Products</h2>
+            <div class="grid grid-cols-2 gap-2">
+                <div class="bg-white p-2 rounded shadow-sm">
+                    <img src="https://i.postimg.cc/Pr5Dr016/p1i4.avif" class="h-40 w-full object-contain mx-auto">
+                    <p class="text-xs mt-2 text-gray-700 h-8 overflow-hidden">Wooden Coin Box Smash</p>
+                    <p class="font-bold text-md mt-1">₹149 <span class="text-gray-400 line-through text-[10px]">₹299</span></p>
+                </div>
+                <div class="bg-white p-2 rounded shadow-sm">
+                    <img src="https://i.postimg.cc/J7BgYdsX/p1.avif" class="h-40 w-full object-contain mx-auto">
+                    <p class="text-xs mt-2 text-gray-700 h-8 overflow-hidden">Handicraft Savings Vault</p>
+                    <p class="font-bold text-md mt-1">₹199 <span class="text-gray-400 line-through text-[10px]">₹499</span></p>
+                </div>
+            </div>
+        </main>
     </div>
 
     <div id="orderModal" class="hidden fixed inset-0 bg-black bg-opacity-70 z-[100] flex items-end">
-        <div class="bg-white w-full rounded-t-2xl p-6 animate-slide-up max-w-lg mx-auto">
-            <div class="flex justify-between items-center mb-4">
-                <h2 class="font-bold text-lg">Delivery Details</h2>
-                <button onclick="document.getElementById('orderModal').classList.add('hidden')" class="text-2xl">&times;</button>
+        <div class="bg-white w-full rounded-t-2xl p-6 shadow-2xl">
+            <div class="flex justify-between items-center mb-5 border-b pb-2">
+                <h2 class="font-bold text-lg text-gray-800 italic">Delivery Details</h2>
+                <button onclick="document.getElementById('orderModal').classList.add('hidden')" class="text-3xl">&times;</button>
             </div>
-            <form id="mainForm" class="space-y-4">
-                <input type="text" id="cName" placeholder="Full Name" required class="w-full border p-3 rounded-md outline-none focus:border-blue-500">
-                <input type="text" id="cPhone" placeholder="Mobile Number" required class="w-full border p-3 rounded-md outline-none">
-                <textarea id="cAddr" placeholder="Full Address with Pincode" required class="w-full border p-3 rounded-md outline-none h-24"></textarea>
-                <button type="submit" class="w-full f-orange text-white py-4 font-bold uppercase rounded-md shadow-lg">Place Order</button>
+            <form id="finalOrderForm" class="space-y-4">
+                <input type="text" id="custName" placeholder="Customer Name" required class="w-full border-b-2 p-2 outline-none focus:border-blue-500">
+                <input type="number" id="custPhone" placeholder="Mobile Number" required class="w-full border-b-2 p-2 outline-none focus:border-blue-500">
+                <textarea id="custAddr" placeholder="Full Address with Pincode" required class="w-full border-b-2 p-2 outline-none focus:border-blue-500 h-20"></textarea>
+                <div class="bg-gray-50 p-3 rounded text-sm text-gray-600">
+                    <p>Item: Wooden Piggy Bank</p>
+                    <p class="font-bold text-black">Total Payable: ₹299</p>
+                </div>
+                <button type="submit" class="w-full f-orange text-white py-4 font-bold uppercase rounded-sm shadow-md">Confirm Order</button>
             </form>
         </div>
     </div>
 
-    <div id="authModal" class="hidden fixed inset-0 bg-black bg-opacity-70 z-[100] flex items-center justify-center p-4">
-        <div class="bg-white w-full max-w-sm rounded-lg p-6">
-            <h2 class="text-2xl font-bold mb-6 text-center text-[#2874f0]">Login to Amasho</h2>
-            <input type="email" id="email" placeholder="Email" class="w-full border p-3 mb-4 rounded outline-none">
-            <input type="password" id="pass" placeholder="Password" class="w-full border p-3 mb-6 rounded outline-none">
-            <div class="flex gap-2">
-                <button onclick="toggleAuth()" class="flex-1 border p-2 rounded">Cancel</button>
-                <button id="doLogin" class="flex-1 f-blue text-white p-2 rounded font-bold">Login</button>
-            </div>
-        </div>
+    <footer class="fixed bottom-0 left-0 right-0 h-14 bg-white border-t flex items-center justify-around text-gray-500 z-50">
+        <div class="text-center text-[#2874f0]"><i class="fas fa-home text-lg"></i><p class="text-[10px]">Home</p></div>
+        <div class="text-center"><i class="fas fa-th-large text-lg"></i><p class="text-[10px]">Categories</p></div>
+        <div onclick="showLogin()" class="text-center"><i class="fas fa-user-circle text-lg"></i><p class="text-[10px]">Account</p></div>
+        <div class="text-center"><i class="fas fa-shopping-cart text-lg"></i><p class="text-[10px]">Cart</p></div>
+    </footer>
+
+    <div class="fixed bottom-14 left-0 right-0 h-14 flex bg-white border-t z-40">
+        <button onclick="alert('Added to Cart')" class="w-1/2 bg-white text-black font-bold uppercase text-sm border-r">Add to Cart</button>
+        <button onclick="document.getElementById('orderModal').classList.remove('hidden')" class="w-1/2 f-orange text-white font-bold uppercase text-sm">Buy Now</button>
     </div>
 
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-app.js";
         import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-database.js";
-        import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-auth.js";
 
         const firebaseConfig = {
             apiKey: "AIzaSyCl8HeKsIUfqCTmNitXZIF_HvEkXCRIMHk",
@@ -119,39 +127,29 @@
 
         const app = initializeApp(firebaseConfig);
         const db = getDatabase(app);
-        const auth = getAuth(app);
 
-        // Global functions
-        window.openOrder = () => document.getElementById('orderModal').classList.remove('hidden');
-        window.toggleAuth = () => document.getElementById('authModal').classList.toggle('hidden');
-
-        // Order Logic
-        document.getElementById('mainForm').onsubmit = async (e) => {
+        // Order Submission
+        document.getElementById('finalOrderForm').onsubmit = async (e) => {
             e.preventDefault();
-            const order = {
-                customer: document.getElementById('cName').value,
-                phone: document.getElementById('cPhone').value,
-                address: document.getElementById('cAddr').value,
+            const orderData = {
+                customer: document.getElementById('custName').value,
+                phone: document.getElementById('custPhone').value,
+                address: document.getElementById('custAddr').value,
                 product: "Wooden Piggy Bank",
                 price: 299,
-                date: new Date().toLocaleString()
+                timestamp: new Date().toLocaleString()
             };
             try {
-                await push(ref(db, 'orders'), order);
-                alert("Success! Order placed successfully.");
+                await push(ref(db, 'orders'), orderData);
+                alert("Order Placed Successfully! We will contact you soon.");
                 location.reload();
-            } catch (err) { alert("Error: " + err.message); }
+            } catch (err) {
+                alert("Error: " + err.message);
+            }
         };
 
-        // Login Logic
-        document.getElementById('doLogin').onclick = async () => {
-            const e = document.getElementById('email').value;
-            const p = document.getElementById('pass').value;
-            try {
-                await signInWithEmailAndPassword(auth, e, p);
-                alert("Logged In!");
-                toggleAuth();
-            } catch (err) { alert("Login Failed: " + err.message); }
+        window.showLogin = () => {
+            alert("Redirecting to Account Login...");
         };
     </script>
 </body>
