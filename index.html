@@ -3,111 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amasho | Sasta aur Sabse Accha</title>
+    <title>Amasho | Best Online Shopping</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        .flipkart-blue { background-color: #2874f0; }
-        .flipkart-orange { background-color: #fb641b; }
+        .f-blue { background-color: #2874f0; }
+        .f-orange { background-color: #fb641b; }
+        .f-yellow { background-color: #ff9f00; }
+        .hide-scroll::-webkit-scrollbar { display: none; }
     </style>
 </head>
 <body class="bg-gray-100 pb-20">
 
-    <header class="flipkart-blue text-white sticky top-0 z-50 py-3 shadow-md">
+    <header class="f-blue text-white sticky top-0 z-50 py-3 shadow-md">
         <div class="container mx-auto px-4 flex items-center justify-between">
-            <div class="text-2xl font-bold italic">Amasho</div>
-            <button onclick="document.getElementById('authModal').classList.remove('hidden')" class="bg-white text-[#2874f0] px-6 py-1 font-bold rounded-sm text-sm">Login</button>
+            <div class="flex items-center gap-3">
+                <i class="fas fa-bars text-xl"></i>
+                <div class="text-2xl font-bold italic">Amasho</div>
+            </div>
+            <button onclick="toggleAuth()" class="bg-white text-[#2874f0] px-5 py-1 font-bold rounded-sm text-sm">Login</button>
         </div>
     </header>
 
-    <main class="container mx-auto p-2">
-        <div class="bg-white rounded-sm shadow-sm overflow-hidden">
-            <div class="p-4 flex justify-center border-b">
-                <img src="https://i.postimg.cc/mD8X73N3/piggy-bank.jpg" class="h-64 object-contain" alt="Wooden Piggy Bank">
+    <div class="bg-white shadow-sm overflow-x-auto hide-scroll flex gap-6 px-4 py-3 text-[10px] font-bold text-gray-600 border-b">
+        <div class="text-center min-w-[60px]"><img src="https://i.postimg.cc/J7BgYdsX/p1.avif" class="w-8 h-8 mx-auto mb-1">Electronics</div>
+        <div class="text-center min-w-[60px]"><img src="https://i.postimg.cc/J7BgYdsX/p1.avif" class="w-8 h-8 mx-auto mb-1">Fashion</div>
+        <div class="text-center min-w-[60px]"><img src="https://i.postimg.cc/J7BgYdsX/p1.avif" class="w-8 h-8 mx-auto mb-1">Home</div>
+        <div class="text-center min-w-[60px]"><img src="https://i.postimg.cc/J7BgYdsX/p1.avif" class="w-8 h-8 mx-auto mb-1">Toys</div>
+        <div class="text-center min-w-[60px]"><img src="https://i.postimg.cc/J7BgYdsX/p1.avif" class="w-8 h-8 mx-auto mb-1">Beauty</div>
+    </div>
+
+    <main class="container mx-auto p-2 max-w-4xl">
+        <div class="bg-white rounded-sm shadow-sm p-4">
+            
+            <div class="relative group">
+                <div id="slider" class="flex overflow-x-auto snap-x snap-mandatory hide-scroll h-80">
+                    <img src="https://i.postimg.cc/J7BgYdsX/p1.avif" class="w-full h-full object-contain snap-center shrink-0">
+                    <img src="https://i.postimg.cc/ZYrHdkBJ/p1i2.avif" class="w-full h-full object-contain snap-center shrink-0">
+                    <img src="https://i.postimg.cc/tCq3nsGN/p1i3.avif" class="w-full h-full object-contain snap-center shrink-0">
+                    <img src="https://i.postimg.cc/Pr5Dr016/p1i4.avif" class="w-full h-full object-contain snap-center shrink-0">
+                </div>
+                <p class="text-[10px] text-center text-gray-400 mt-2">Swipe left to see more photos</p>
             </div>
 
-            <div class="p-4">
-                <h1 class="text-md text-gray-800 leading-tight">50000 to 120000 saving Money gulak medium quality Wooden Money Bank for Kids</h1>
+            <div class="mt-4">
+                <h1 class="text-lg text-gray-800 leading-tight">50000 to 120000 saving Money gulak medium quality Wooden Money Piggy Bank for Kids</h1>
                 <div class="flex items-center gap-2 mt-1">
                     <span class="bg-green-700 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-sm">4.1 ★</span>
                     <span class="text-gray-400 text-xs font-bold">36,613 Ratings</span>
                 </div>
-
-                <div class="mt-2 flex items-baseline gap-2">
-                    <span class="text-2xl font-bold text-gray-900">₹100</span>
-                    <span class="text-gray-500 line-through text-sm">₹599</span>
-                    <span class="text-green-600 font-bold text-sm">83% off</span>
+                <div class="mt-3 flex items-baseline gap-2">
+                    <span class="text-3xl font-bold text-gray-900">₹299</span>
+                    <span class="text-gray-500 line-through text-md">₹599</span>
+                    <span class="text-green-600 font-bold text-md">50% off</span>
                 </div>
-                <p class="text-xs text-green-600 font-bold mt-1">Special Offer: Free Delivery</p>
+                <p class="text-xs text-green-700 font-bold mt-1 tracking-wide"><i class="fas fa-truck"></i> Free Delivery</p>
+            </div>
 
-                <div class="mt-4 border-t pt-4">
-                    <h2 class="font-bold text-sm mb-2">Product Highlights</h2>
-                    <ul class="text-xs text-gray-700 space-y-1">
-                        <li><span class="text-gray-400">Material:</span> Wood</li>
-                        <li><span class="text-gray-400">Dimensions:</span> 13x18 cm</li>
-                        <li><span class="text-gray-400">Type:</span> Handicraft Piggy Bank</li>
-                    </ul>
+            <div class="mt-6 border-t pt-4">
+                <h2 class="font-bold text-sm mb-3">Product Details</h2>
+                <div class="grid grid-cols-2 gap-y-3 text-xs">
+                    <p class="text-gray-500">Material</p><p class="text-gray-800">Wood</p>
+                    <p class="text-gray-500">Type</p><p class="text-gray-800">Handicraft Piggy Bank</p>
+                    <p class="text-gray-500">Recommended Age</p><p class="text-gray-800">Above 4-6 Years</p>
+                    <p class="text-gray-500">Net Quantity</p><p class="text-gray-800">1</p>
+                    <p class="text-gray-500">Country of Origin</p><p class="text-gray-800">India</p>
                 </div>
             </div>
         </div>
     </main>
 
-    <div class="fixed bottom-0 left-0 right-0 h-14 flex bg-white border-t z-50">
-        <button onclick="openCheckout()" class="w-1/2 bg-white text-black font-bold uppercase text-sm">Add to Cart</button>
-        <button onclick="openCheckout()" class="w-1/2 flipkart-orange text-white font-bold uppercase text-sm">Buy Now</button>
+    <div class="fixed bottom-0 left-0 right-0 h-14 flex bg-white border-t z-50 shadow-lg">
+        <button onclick="openOrder()" class="w-1/2 bg-white text-black font-bold uppercase text-sm border-r">Add to Cart</button>
+        <button onclick="openOrder()" class="w-1/2 f-orange text-white font-bold uppercase text-sm">Buy Now</button>
     </div>
 
-    <div id="checkoutModal" class="hidden fixed inset-0 bg-black bg-opacity-60 z-[100] flex items-end">
-        <div class="bg-white w-full rounded-t-xl p-6 animate-slide-up">
-            <h2 class="font-bold border-b pb-2 mb-4">Delivery Address</h2>
-            <form id="orderForm" class="space-y-3">
-                <input type="text" id="custName" placeholder="Full Name" required class="w-full border p-2 text-sm rounded">
-                <textarea id="custAddr" placeholder="Address with Pincode" required class="w-full border p-2 text-sm rounded"></textarea>
-                <input type="text" id="custPhone" placeholder="Mobile Number" required class="w-full border p-2 text-sm rounded">
-                <input type="text" id="utr" placeholder="Enter UPI Transaction ID" required class="w-full border-2 border-blue-500 p-2 text-sm font-bold rounded"><button type="submit" class="w-full flipkart-orange text-white py-3 font-bold uppercase rounded-sm">Confirm Order</button>
+    <div id="orderModal" class="hidden fixed inset-0 bg-black bg-opacity-70 z-[100] flex items-end">
+        <div class="bg-white w-full rounded-t-2xl p-6 animate-slide-up max-w-lg mx-auto">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="font-bold text-lg">Delivery Details</h2>
+                <button onclick="document.getElementById('orderModal').classList.add('hidden')" class="text-2xl">&times;</button>
+            </div>
+            <form id="mainForm" class="space-y-4">
+                <input type="text" id="cName" placeholder="Full Name" required class="w-full border p-3 rounded-md outline-none focus:border-blue-500">
+                <input type="text" id="cPhone" placeholder="Mobile Number" required class="w-full border p-3 rounded-md outline-none">
+                <textarea id="cAddr" placeholder="Full Address with Pincode" required class="w-full border p-3 rounded-md outline-none h-24"></textarea>
+                <button type="submit" class="w-full f-orange text-white py-4 font-bold uppercase rounded-md shadow-lg">Place Order</button>
             </form>
+        </div>
+    </div>
+
+    <div id="authModal" class="hidden fixed inset-0 bg-black bg-opacity-70 z-[100] flex items-center justify-center p-4">
+        <div class="bg-white w-full max-w-sm rounded-lg p-6">
+            <h2 class="text-2xl font-bold mb-6 text-center text-[#2874f0]">Login to Amasho</h2>
+            <input type="email" id="email" placeholder="Email" class="w-full border p-3 mb-4 rounded outline-none">
+            <input type="password" id="pass" placeholder="Password" class="w-full border p-3 mb-6 rounded outline-none">
+            <div class="flex gap-2">
+                <button onclick="toggleAuth()" class="flex-1 border p-2 rounded">Cancel</button>
+                <button id="doLogin" class="flex-1 f-blue text-white p-2 rounded font-bold">Login</button>
+            </div>
         </div>
     </div>
 
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-app.js";
         import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-database.js";
+        import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-auth.js";
 
-        // Your Config from Screenshot
         const firebaseConfig = {
             apiKey: "AIzaSyCl8HeKsIUfqCTmNitXZIF_HvEkXCRIMHk",
             authDomain: "amasho-beb59.firebaseapp.com",
             projectId: "amasho-beb59",
-            storageBucket: "amasho-beb59.firebasestorage.app",
-            messagingSenderId: "66614392887",
-            appId: "1:66614392887:web:a25043a44ae5d3310f67b2",
-            databaseURL: "https://amasho-beb59-default-rtdb.firebaseio.com/" // Singapore Server
+            databaseURL: "https://amasho-beb59-default-rtdb.firebaseio.com/"
         };
 
         const app = initializeApp(firebaseConfig);
         const db = getDatabase(app);
+        const auth = getAuth(app);
 
-        window.openCheckout = () => {
-            document.getElementById('checkoutModal').classList.remove('hidden');
-        };
+        // Global functions
+        window.openOrder = () => document.getElementById('orderModal').classList.remove('hidden');
+        window.toggleAuth = () => document.getElementById('authModal').classList.toggle('hidden');
 
-        document.getElementById('orderForm').onsubmit = async (e) => {
+        // Order Logic
+        document.getElementById('mainForm').onsubmit = async (e) => {
             e.preventDefault();
-            const orderData = {
-                name: document.getElementById('custName').value,
-                address: document.getElementById('custAddr').value,
-                phone: document.getElementById('custPhone').value,
-                utr: document.getElementById('utr').value,
+            const order = {
+                customer: document.getElementById('cName').value,
+                phone: document.getElementById('cPhone').value,
+                address: document.getElementById('cAddr').value,
                 product: "Wooden Piggy Bank",
-                amount: 100,
-                time: new Date().toLocaleString()
+                price: 299,
+                date: new Date().toLocaleString()
             };
-            
             try {
-                await push(ref(db, 'orders'), orderData);
-                alert("Order Placed Successfully!");
+                await push(ref(db, 'orders'), order);
+                alert("Success! Order placed successfully.");
                 location.reload();
             } catch (err) { alert("Error: " + err.message); }
+        };
+
+        // Login Logic
+        document.getElementById('doLogin').onclick = async () => {
+            const e = document.getElementById('email').value;
+            const p = document.getElementById('pass').value;
+            try {
+                await signInWithEmailAndPassword(auth, e, p);
+                alert("Logged In!");
+                toggleAuth();
+            } catch (err) { alert("Login Failed: " + err.message); }
         };
     </script>
 </body>
